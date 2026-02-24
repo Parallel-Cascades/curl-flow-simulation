@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 23d536085073ec14fad39679569a1dc3
+timeCreated: 1719323809
+AssetOrigin:
+  serializedVersion: 1
+  productId: 296362
+  packageName: Procedural Planet Generation - Lite Sample Pack
+  packageVersion: 3.0.1
+  assetPath: Assets/ParallelCascades/ProceduralShaders/HLSL/FractalNoise.hlsl
+  uploadId: 835338

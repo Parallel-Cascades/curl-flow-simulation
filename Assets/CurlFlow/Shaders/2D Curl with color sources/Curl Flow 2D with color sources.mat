@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Curl Flow 2D
-  m_Shader: {fileID: -6465566751694194690, guid: 8de79a0f8a1c46f40b3036fe4e1efefd, type: 3}
+  m_Name: Curl Flow 2D with color sources
+  m_Shader: {fileID: -6465566751694194690, guid: 048525947f37db542bde39190636b4a9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -22,12 +22,19 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _Color_Source_Texture:
+        m_Texture: {fileID: 2800000, guid: 2033ec1a128be72468da89c75bc833f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Color_Source_Strength: 0.1
+    - _Color_Sources_Scale: 40
+    - _Color_Sources_Size: 0.403
     - _Curl_Scale: 12
     - _Flow_Kernels_Movement_Speed: 0.01
-    - _Flow_Speed: 0.02
+    - _Flow_Speed: 0.1
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

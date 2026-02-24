@@ -12,6 +12,7 @@ namespace CurlFlow.Runtime
         private void Awake()
         {
             m_meshRenderer = GetComponent<MeshRenderer>();
+            m_customRenderTexture.Initialize();
         }
 
         private void Update()
