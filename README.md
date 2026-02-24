@@ -99,3 +99,9 @@ There are some minor utilities in the project to make working with Custom Render
 editor for the 'CustomRenderTextureSimulation' component adds the material inspector for the custom render texture shader
 in the inspector view, so that you can edit your simulation shader when you select the body that displays the texture through a
 display material.
+
+---
+
+If this tutorial was useful to you, and you would like to see more like it, consider supporting me on [Ko-fi](https://ko-fi.com/parallelcascades)
+
+Check out more of my work at [parallelcascades.com](https://parallelcascades.com)
