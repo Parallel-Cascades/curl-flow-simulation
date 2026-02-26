@@ -8,8 +8,8 @@ This technique is used for procedural gas giants in my Unity asset - [Procedural
 ![gas-giant-curl.png](Documentation/gas-giant-curl.png)
 
 This was built thanks to Emil Dziewanowski and Jan Wedekind's articles on the topic:
-https://emildziewanowski.com/flowfields/
-https://www.wedesoft.de/software/2023/03/20/procedural-global-cloud-cover/
+- https://emildziewanowski.com/flowfields/
+- https://www.wedesoft.de/software/2023/03/20/procedural-global-cloud-cover/
 
 To implement this in Unity, we can use Custom Render Textures for the simulation source and Shader Graph to write
 a simple shader that calculates curl from procedural noise. This demo project shows a simple 2D curl simulation on
