@@ -29,11 +29,17 @@ float3 calculateGradient(float offset, float3 tangent, float3 bitangent, float n
     return gradient;
 }
 
+float sampleGasGiantTurbulence(float3 position, float3 randomizationOffset, float turbulenceScale)
+{
+    float turbulence;
+    fbmSimplexNoise3D_float(position, randomizationOffset, 3, .5, 2, turbulenceScale, turbulence);
+    return turbulence;
+}
 
-void simplex3DCurl_float(
+void gasGiantTurbulence_float(
     float3 position,
     float3 randomizationOffset,
-    float scale,
+    float turbulenceScale,
     out float3 curlVector)
 {
     float samplingOffset;
@@ -43,14 +49,39 @@ void simplex3DCurl_float(
     float3 offsetV;
     
     getSamplingOffsetsInTangentDirs(position, samplingOffset, tangent, bitangent, offsetU, offsetV);
+
+    float noise = sampleGasGiantTurbulence(position, randomizationOffset, turbulenceScale);
+    float noiseU = sampleGasGiantTurbulence(offsetU, randomizationOffset, turbulenceScale);
+    float noiseV = sampleGasGiantTurbulence(offsetV, randomizationOffset, turbulenceScale);
     
-    float noise;
-    float noiseU;
-    float noiseV;
+    float3 gradient = calculateGradient(samplingOffset, tangent, bitangent, noise, noiseU, noiseV);
     
-    fbmSimplexNoise3D_float(position, randomizationOffset, 3, .5, 2, scale, noise);
-    fbmSimplexNoise3D_float(offsetU, randomizationOffset, 3, .5, 2, scale, noiseU);
-    fbmSimplexNoise3D_float(offsetV, randomizationOffset, 3, .5, 2, scale, noiseV);
+    curlVector = cross(position, gradient);
+}
+
+float sampleGasGiantBandedFlow(float3 position, float3 randomizationOffset, float bandsScale)
+{
+    float bands = sin(position.y * PI * bandsScale);
+    return bands;
+}
+
+void gasGiantBandedFlow_float(
+    float3 position,
+    float3 randomizationOffset,
+    float bandsScale,
+    out float3 curlVector)
+{
+    float samplingOffset;
+    float3 tangent;
+    float3 bitangent;
+    float3 offsetU;
+    float3 offsetV;
+    
+    getSamplingOffsetsInTangentDirs(position, samplingOffset, tangent, bitangent, offsetU, offsetV);
+
+    float noise = sampleGasGiantBandedFlow(position, randomizationOffset, bandsScale);
+    float noiseU = sampleGasGiantBandedFlow(offsetU, randomizationOffset, bandsScale);
+    float noiseV = sampleGasGiantBandedFlow(offsetV, randomizationOffset, bandsScale);
     
     float3 gradient = calculateGradient(samplingOffset, tangent, bitangent, noise, noiseU, noiseV);
     

@@ -14,7 +14,8 @@ This was built thanks to Emil Dziewanowski and Jan Wedekind's articles on the to
 To implement this in Unity, we can use Custom Render Textures for the simulation source and Shader Graph to write
 a simple shader that calculates curl from procedural noise. This demo project shows a simple 2D curl simulation on
 a flat plane, a slightly more complex version that uses color reintroduction to keep the simulation going indefinitely,
-and finally a 3D spherical version that maps the curl to a cubemap and then to a sphere.
+a 3D spherical version that maps the curl to a cubemap and then to a sphere. Finally a simple gas giant simulation with
+alternating vertical flow bands and general turbulent flow.
 
 ![2d-curl.png](Documentation/2d-curl.png)
 
@@ -92,6 +93,21 @@ the same 2D noise texture as the source for the simulation. This gets repeated a
 simulation:
 
 ![cubemap-initialization-bug.png](Documentation/cubemap-initialization-bug.png)
+
+## Gas Giant
+
+![gas-giant-simulation.png](Documentation/gas-giant-simulation.png)
+
+Combining all the techniques allows us to make gas giants like this. Further layers and types of flow patterns can
+be added to make the patterns more complex and interesting, like giant spherical storms and small oval vortices.
+
+It's noticeable how the simulation starts
+from a grid pattern and for the first few seconds we can see the grid cells flowing and distorting. After this it will
+settle into a more natural looking and consistent flow pattern.
+
+In the full asset, we also use a custom lit material that uses procedural normals and smoothness to make the gas 
+giant surface stand out more. Editor baking tools allow us to bake a certain starting/initial state of the simulation
+to a texture that hides the grid pattern and gives us a nice gas giant to look at immediately as a scene loads.
 
 ## Editor Utilities
 

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Curl Flow 2D with color sources
-  m_Shader: {fileID: -6465566751694194690, guid: 048525947f37db542bde39190636b4a9, type: 3}
+  m_Name: Gas Giant (Custom Render Texture)
+  m_Shader: {fileID: -6465566751694194690, guid: f8b4b49bd1d58c14599ee6ed5935dd73, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -22,19 +22,22 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _Color_Source_Texture:
-        m_Texture: {fileID: 2800000, guid: 2033ec1a128be72468da89c75bc833f6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Color_Source_Strength: 0.5
+    - _Bands_Curl_Flow_Strength: 2
+    - _Bands_Curl_Scale: 6
+    - _Color_Source_Strength: 1
+    - _Color_Sources_Movement_Speed: 0.02
     - _Color_Sources_Scale: 55
     - _Color_Sources_Size: 0.5
-    - _Curl_Scale: 12
-    - _Flow_Kernels_Movement_Speed: 0.01
-    - _Flow_Speed: 0.1
+    - _Cubemap_Resolution: 0
+    - _Curl_Flow_Speed: 0.000025
+    - _Curl_Scale: 1
+    - _Flow_Kernels_Movement_Speed: 0.05
+    - _Source_Pattern_Scale: 12
+    - _Turbulance_Curl_Flow_Strength: 0.5
+    - _Turbulance_Curl_Scale: 6
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -25,15 +25,19 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _Bands_Curl_Flow_Strength: 4
+    - _Bands_Curl_Scale: 2
     - _Color_Source_Strength: 1
-    - _Color_Sources_Movement_Speed: 0.02
-    - _Color_Sources_Scale: 32
-    - _Color_Sources_Size: 0.15
+    - _Color_Sources_Movement_Speed: 0.01
+    - _Color_Sources_Scale: 55
+    - _Color_Sources_Size: 0.1
     - _Cubemap_Resolution: 0
     - _Curl_Flow_Speed: 0.0001
     - _Curl_Scale: 1
     - _Flow_Kernels_Movement_Speed: 0.01
     - _Source_Pattern_Scale: 22
+    - _Turbulance_Curl_Flow_Strength: 2
+    - _Turbulance_Curl_Scale: 6
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
