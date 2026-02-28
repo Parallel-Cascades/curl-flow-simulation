@@ -1,4 +1,5 @@
-﻿Copyright (C) 2026 by Emil Tonev (Parallel Cascades)
+﻿Copyright (C) 2026 by Emil Tonev/Parallel Cascades (Gas Giant Curl Simulation)
+Copyright (C) 2011 by Ashima Arts (Simplex noise)
 
 Licensed under the MIT License:
 
