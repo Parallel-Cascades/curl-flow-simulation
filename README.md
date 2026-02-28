@@ -109,6 +109,14 @@ In the full asset, we also use a custom lit material that uses procedural normal
 giant surface stand out more. Editor baking tools allow us to bake a certain starting/initial state of the simulation
 to a texture that hides the grid pattern and gives us a nice gas giant to look at immediately as a scene loads.
 
+Using this technique and varying the colors and flow scales we can get various gas giants like these:
+
+![uranian.png](Documentation/uranian.png)
+
+![saturnian.png](Documentation/saturnian.png)
+
+![neptunian.png](Documentation/neptunian.png)
+
 ## Editor Utilities
 
 There are some minor utilities in the project to make working with Custom Render Textures easier. A custom
