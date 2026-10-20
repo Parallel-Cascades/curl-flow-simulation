@@ -126,6 +126,4 @@ display material.
 
 ---
 
-If this tutorial was useful to you, and you would like to see more like it, consider supporting me on [Ko-fi](https://ko-fi.com/parallelcascades)
-
 Check out more of my work at [parallelcascades.com](https://parallelcascades.com)
